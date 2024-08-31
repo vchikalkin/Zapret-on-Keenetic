@@ -311,4 +311,28 @@ git pull --rebase --autostash
 #### Получить доступ к ИИ-сервисам, включая (Microsoft Copilot, ChatGPT, Google Gemini и другие), а также выполнять установку антивирусов и их обновлений, инсайдерских сборок и обновлений Windows без использования VPN ниже:
 [Как настроить Comss.one DNS (DNS-over-HTTPS) на роутерах Keenetic](https://www.comss.ru/page.php?id=13072)
 
+#### Проверить блокнутые домены:
+```shell
+ping api.instagram.com -w 1
+ping i.instagram.com -w 1
+ping graph.instagram.com -w 1
+ping static.cdninstagram.com -w 1
+ping edge-chat.instagram.com -w 1
+ping scontent-hel3-1.cdninstagram.com -w 1
+ping scontent.cdninstagram.com -w 1
+ping www.instagram.com -w 1
+ping b.i.instagram.com -w 1
+ping scontent-hel3-1.xx.fbcdn.net -w 1
+ping www.facebook.com -w 1
+ping fb.com -w 1
+ping m.facebook.com -w 1
+ping edge-chat.facebook.com -w 1
+ping graph.facebook.com -w 1
+ping static.xx.fbcdn.net -w 1
+ping scontent.xx.fbcdn.net -w 1
+ping connect.facebook.net -w 1
+ping gateway.facebook.com -w 1
+
+```
+
 #zapret #bol-van #keenetic #youtube #ускорение #ростелеком #исс #annex.pro #мтс #дом.ру
