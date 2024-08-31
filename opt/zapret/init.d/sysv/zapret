@@ -54,7 +54,7 @@ do_start()
 	zapret_run_daemons
 	[ "$INIT_APPLY_FW" != "1" ] || { zapret_apply_firewall; }
 	for IFACE_N in $IFACE_WAN; do
-		iptables -t nat -A POSTROUTING -o $IFACE_N -j MASQUERADE
+		iptables -t nat -A POSTROUTING -o $IFACE_N -p udp -m mark --mark 0x40000000/0x40000000 -j MASQUERADE
     done
 }
 do_stop()
@@ -62,7 +62,7 @@ do_stop()
 	zapret_stop_daemons
 	[ "$INIT_APPLY_FW" != "1" ] || zapret_unapply_firewall
 	for IFACE_N in $IFACE_WAN; do
-		iptables -t nat -D POSTROUTING -o $IFACE_N -j MASQUERADE
+		iptables -t nat -D POSTROUTING -o $IFACE_N -p udp -m mark --mark 0x40000000/0x40000000 -j MASQUERADE
 	done
 }
 
@@ -90,12 +90,12 @@ case "$1" in
 	restart-fw|restart_fw)
 		zapret_unapply_firewall
 		for IFACE_N in $IFACE_WAN; do
-			iptables -t nat -D POSTROUTING -o $IFACE_N -j MASQUERADE
+			iptables -t nat -D POSTROUTING -o $IFACE_N -p udp -m mark --mark 0x40000000/0x40000000 -j MASQUERADE
 		done
 			
 		zapret_apply_firewall
 		for IFACE_N in $IFACE_WAN; do
-			iptables -t nat -A POSTROUTING -o $IFACE_N -j MASQUERADE
+			iptables -t nat -A POSTROUTING -o $IFACE_N -p udp -m mark --mark 0x40000000/0x40000000 -j MASQUERADE
 		done
 		;;
 	
