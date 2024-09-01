@@ -29,7 +29,8 @@ Keenetic в курсе о [проблеме](https://forum.keenetic.com/topic/18
     <summary>Обязательно привести настройки DNS к виду как на скриншоте</summary>
 - ams01.dnscry.pt / 77.88.8.8 common.dot.dns.yandex.net
     
-![DoT](https://github.com/nikrays/Zapret-on-Keenetic/blob/master/images/DoT.png)
+![DoT](https://github.com/user-attachments/assets/7a852b41-a361-481b-9b99-23d8e72865d1)
+
     
 </details>
 
