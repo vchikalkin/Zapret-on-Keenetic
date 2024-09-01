@@ -27,12 +27,13 @@ Keenetic в курсе о [проблеме](https://forum.keenetic.com/topic/18
 (обязательно) Необходимо настроить DоT вне зависимости от провайдера, согласно инструкции [Прокси-серверы DNS-over-TLS и DNS-over-HTTPS для шифрования DNS-запросов](https://help.keenetic.com/hc/ru/articles/360007687159).
 <details>
     <summary>Обязательно привести настройки DNS к виду как на скриншоте</summary>
-    
-![DoT](https://github.com/nikrays/Zapret-on-Keenetic/blob/master/images/DoT.png)
+- ams01.dnscry.pt / 77.88.8.8 common.dot.dns.yandex.net
+![DoT](https://github.com/user-attachments/assets/d0b5df2f-d845-401a-a003-6c11d3e518d9)
     
 </details>
 
 - Еще один эффективный вариант - использовать ресолвер от yandex 77.88.8.88 на нестандартном порту 1253.
+
 Многие провайдеры не анализируют обращения к DNS на нестандартных портах.
 
 (обязательно) [Установка системы пакетов репозитория Entware на USB-накопитель](https://help.keenetic.com/hc/ru/articles/360021214160).
@@ -352,6 +353,14 @@ ping connect.facebook.net -w 1
 ping gateway.facebook.com -w 1
 
 
+```
+
+#### Опционально можно добавить 2 домена в cli роутера:
+```shell
+ip host scontent-hel3-1.xx.fbcdn.net 157.240.214.11
+```
+```shell
+ip host scontent-hel3-1.cdninstagram.com 157.240.0.63
 ```
 
 #zapret #bol-van #keenetic #youtube #ускорение #ростелеком #исс #annex.pro #мтс #дом.ру
